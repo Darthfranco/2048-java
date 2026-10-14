@@ -4,6 +4,7 @@ import java.util.Random;
 public class TwentyFourtyEight {
     
     static String[][] tileValues = new String[4][4];
+    static int colLength = 0;
     static String clear = "\u001B[2J";
     static Scanner input = new Scanner(System.in);
     static String direction;
@@ -31,7 +32,7 @@ public class TwentyFourtyEight {
 
     
     public static void title(){
-        System.out.println("\nWelcome to 2048\nU/D/R/L to move");
+        System.out.println("Welcome to 2048\nU/D/R/L to move");
     }
     public static void setTiles(){
               for (int row = 0;row < tileValues.length;row++){
@@ -46,11 +47,20 @@ public class TwentyFourtyEight {
     }
     public static void board(){
         title();
+        align();
             for (int row = 0;row < tileValues.length;row++){
+                if(row != 0){
        System.out.println("");
-       for (int col = 0;col < tileValues[row].length;col++)
-           System.out.print(tileValues[row][col]+"  ");
-                //spaces(3-tileValues[row][col]);
+       System.out.println("");
+         }
+       for (int col = 0;col < tileValues[row].length;col++){
+           System.out.print(tileValues[row][col]);
+           if(colLength>2){
+           space(colLength +2-tileValues[row][col].length());
+           }else{
+               space(5-tileValues[row][col].length());
+           }
+       }
         }
             System.out.println("");
     }
@@ -303,5 +313,14 @@ public class TwentyFourtyEight {
             System.out.print(" ");
         }
     }
- 
+    public static void align(){
+       for (int row = 0;row < tileValues.length;row++){
+        for (int col = 0;col < tileValues[row].length;col++){
+           if (colLength < tileValues[row][col].length()){
+               colLength = tileValues[row][col].length();
+           }
+       }
+      }
+
+    }
 }
