@@ -1,0 +1,10 @@
+# Java build output
+/build/
+*.class
+*.jar
+
+# Local editor and operating-system files
+.DS_Store
+.idea/
+.vscode/
+*.iml
