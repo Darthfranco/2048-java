@@ -1,6 +1,6 @@
 # 2048 Java
 
-A terminal-based 2048 game written in Java. Slide and combine matching tiles on a 4×4 board.
+A terminal-based 2048 game written in Java. (This project was done for learning, no ai used in coding).
 
 ## Play
 
