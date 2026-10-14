@@ -4,12 +4,18 @@ A terminal-based 2048 game written in Java. (This project was done for learning,
 
 ## Play
 
-Install Java 17 or newer, then download `2048-java.jar` from the [latest release](https://github.com/Darthfranco/2048-java/releases/latest).
+Install JDK 17 or newer, then download `TwentyFourtyEight.java` or clone this repository.
 
-Open a terminal in the download folder and run:
+Open a terminal in the folder containing `TwentyFourtyEight.java`. Compile the source:
 
 ```sh
-java -jar 2048-java.jar
+javac TwentyFourtyEight.java
+```
+
+Then run the game:
+
+```sh
+java TwentyFourtyEight
 ```
 
 Type a lowercase direction and press Enter:
@@ -23,22 +29,4 @@ Type a lowercase direction and press Enter:
 
 Press Ctrl+C to quit. Use a terminal that supports ANSI escape codes for screen clearing.
 
-## Run from source
-
-With JDK 17 or newer installed, run this from the repository folder:
-
-```sh
-java TwentyFourtyEight.java
-```
-
-## Build the JAR
-
-From the repository folder, using JDK 17 or newer:
-
-```sh
-javac --release 17 -d build TwentyFourtyEight.java
-jar --create --file 2048-java.jar --main-class TwentyFourtyEight -C build .
-java -jar 2048-java.jar
-```
-
-The game has no third-party dependencies. The original game source is in `TwentyFourtyEight.java`; compiled downloads are available under [Releases](https://github.com/Darthfranco/2048-java/releases).
+The game has no third-party dependencies.
