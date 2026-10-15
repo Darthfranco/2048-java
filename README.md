@@ -1,20 +1,26 @@
-# 2048 Java
+# Java Terminal Games
 
-A terminal-based 2048 game written in Java. (This project was done for learning, no ai used in coding).
+Terminal games built while learning Java. No AI was used to write the game code.
 
-## Play
+## Getting started
 
-Install JDK 17 or newer, then download `TwentyFourtyEight.java` or clone this repository.
+Install JDK 17 or newer, then download the Java files or clone this repository:
 
-Open a terminal in the folder containing `TwentyFourtyEight.java`. Compile the source:
+```sh
+git clone https://github.com/Darthfranco/java-terminal-games.git
+cd java-terminal-games
+```
+
+Run the commands below in the folder containing the Java files. Both games use only Java's standard library. Use a terminal that supports ANSI escape codes for screen clearing and colors. Press Ctrl+C to quit either game.
+
+## 2048
+
+Slide and combine matching tiles on a 4×4 board.
+
+Compile `TwentyFourtyEight.java`, then run the game:
 
 ```sh
 javac TwentyFourtyEight.java
-```
-
-Then run the game:
-
-```sh
 java TwentyFourtyEight
 ```
 
@@ -27,6 +33,19 @@ Type a lowercase direction and press Enter:
 | `l` | Left |
 | `r` | Right |
 
-Press Ctrl+C to quit. Use a terminal that supports ANSI escape codes for screen clearing.
+## Wordle
 
-The game has no third-party dependencies.
+Guess a randomly chosen five-letter word. Keep guessing until you find it; the game counts how many attempts you take.
+
+Compile `wordle.java`, then run the game (the class name is lowercase):
+
+```sh
+javac wordle.java
+java wordle
+```
+
+Type a five-letter word and press Enter. After each guess:
+
+- Green letters are in the correct position.
+- Yellow letters appear in the word but are in a different position.
+- Uncolored letters do not appear in the word.
